@@ -1,0 +1,8 @@
+php_value output_buffering OFF
+php_value default_charset UTF-8
+php_value mbstring.detect_order SJIS,EUC-JP,JIS,UTF-8,ASCII
+php_value mbstring.http_input pass
+php_value mbstring.http_output pass
+php_value mbstring.internal_encoding UTF-8
+php_value mbstring.substitute_character none 
+php_value mbstring.encoding_translation OFF

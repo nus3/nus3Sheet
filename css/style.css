@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+/* --------------------------------
+  base
+-------------------------------- */
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ', Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  height: auto;
+}
+body {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin: 0;
+  min-width: 340px;
+  color: #4A4F53;
+  background-color: #F0F0F0;
+}
+input[type="text"] {
+  outline: 0;
+  border: 0px;
+  background: transparent;
+  font-size: 2.0rem;
+}
+textarea {
+  outline: 0;
+  border: 0px;
+  background: transparent;
+  font-size: 1.8rem;
+}
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+input[type="radio"]:checked + label {
+	background-color: #2892F9;
+	color: #ffffff;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+}
+::-ms-expand {
+	display: none;
+}
+select:focus {
+  outline: 0;
+}
+/*------------------------------
+button
+------------------------------*/
+
+.button {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #494F52;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+.button:hover {
+  background-color: #2892F9;
+}
+
+/*------------------------------
+parts
+------------------------------*/
+
+.header-fixed{
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  z-index: 100;
+}
+.header {
+  background-color: #494F52;
+}
+.header .mainTitle{
+  padding-left: 30px;
+  color: #FFFFFF;
+}
+.header .backBtn{
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 40px;
+  height: 65px;
+  font-size: 1.8rem;
+}
+.header a{
+  color: #FFFFFF;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.header a:hover{
+  color: #7ABBFC;
+}
+.footer {
+  background-color: #494F52;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 99;
+}
+.footer .copyWriter{
+  color: #FFFFFF;
+  padding-left: 20px;
+}
+
+/*------------------------------
+contents
+------------------------------*/
+.contents {
+  padding: 65px 0 40px 0;
+  width: 98%;
+  margin: 10px auto;
+}
+.contents .form{
+  background-color: #FFFFFF;
+  min-height: 980px;
+  border: 1px solid #CDCDCD;
+}
+.contents .form .form_area{
+  margin: 0 30px;
+}
+.contents .form .input_label{
+  font-size: 2.0rem;
+  margin: 20px 0 5px 0;
+}
+.contents .form .input_text{
+  border: none;
+  border-bottom: 2px solid #CDCDCD;
+  width: 100%;
+  padding: 8px;
+  margin-left: 10px;
+  transition: border-bottom 0.3s;
+}
+.contents .form .input_text:focus{
+  border-bottom: 2px solid #FF7280;
+}
+.contents .form .input_text:hover{
+  border-bottom: 2px solid #FF7280;
+}
+.contents .form .input_textarea{
+  border: none;
+  border-bottom: 2px solid #CDCDCD;
+  width: 100%;
+  padding: 8px;
+  margin-left: 10px;
+  transition: border-bottom 0.3s;
+}
+.contents .form .input_textarea:focus{
+  border-bottom: 2px solid #FF7280;
+}
+.contents .form .input_textarea:hover{
+  border-bottom: 2px solid #FF7280;
+}
+.input_radio {
+	margin: 3px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+  padding: 15px 25px;
+	cursor: pointer;
+	color: #FFFFFF;
+	border-radius: 3px;
+  background-color: #494F52;
+  transition: background-color 0.3s, color 0.3s;
+}
+.input_radio:hover {
+	background-color: #C8C8C8;
+  color: #4A4F53;
+}
+.input_list {
+  width: 100%;
+	padding: 15px 15px;
+  margin-left: 10px;
+  border: none;
+  border-bottom: 2px solid #CDCDCD;
+  font-size: 2.0rem;
+  background-image:url(../img/arrow.png);
+  background-repeat:no-repeat;
+  background-size:25px 25px;
+  background-position:right center;
+  transition: border-bottom 0.3s;
+}
+.input_list:focus{
+  border-bottom: 2px solid #FF7280;
+}
+.input_list:hover{
+  border-bottom: 2px solid #FF7280;
+}
+.check_css {
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 42px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 2.0rem;
+  z-index: 1;
+}
+.check_css:hover:after {
+  border-color: #2892F9;
+}
+.check_css:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  display: block;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  content: '';
+  z-index: 2;
+}
+.check_css:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  display: block;
+  margin-top: -6px;
+  width: 9px;
+  height: 9px;
+  border-right: 3px solid #2892F9;
+  border-bottom: 3px solid #2892F9;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 3;
+}
+input[type=checkbox]:checked + .check_css:before {
+  opacity: 1;
+}
+.form .button{
+  margin-top: 30px;
+  width: 100%;
+  font-size: 2.4rem;
+}
+/*------------------------------
+smartPhone
+------------------------------*/
+
+@media screen and (max-width: 640px) {
+  body {
+    min-width: 300px;
+  }
+  .header .backBtn{
+    padding-top: 0px;
+    height: 30px;
+    font-size: 1.8rem;
+  }
+  .contents {
+    padding: 92px 0 40px 0;
+  }
+  .contents .form{
+    min-height: 1050px;
+  }
+  .check_css {
+    margin-top: 10px;
+  }
+}
